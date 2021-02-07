@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gameControl';
+
+  oddNumberArray: number[] = [];
+
+  evenNumberArray: number[] = [];
+
+  onIntervalFired(firedNumber: number) {
+    if(firedNumber % 2 === 0) {
+      this.evenNumberArray.push(firedNumber);
+    } else {
+      this.oddNumberArray.push(firedNumber);
+    }
+  }
+  
 }
